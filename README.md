@@ -10,7 +10,7 @@ an Electron App version of Moorhen.
 2. `cd MoorhenElectron`
 3. `npm install`
 4. `cp -r node_modules/moorhen/baby-gru ./public/`
-5.  Build the app 
+5.  Build the app  
   * `npm run make-mac-m1` to make an M1 macOS app and redistributable zip
   * `npm run make-mac` to make an Intel macOS app and redistributable zip
   * `npm run make-linux` to make an Linux macOS app and redistributable zip
