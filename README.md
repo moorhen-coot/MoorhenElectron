@@ -8,7 +8,7 @@ an Electron App version of Moorhen.
 
 1. `git clone https://github.com/stuartjamesmcnicholas/MoorhenElectron.git`
 2. `cd MoorhenElectron`
-3. `npm install` *I have had most success with emscripten provdeid npm/node when doing this. YMMV.*
+3. `npm install` *I have had most success with emscripten provided npm/node when doing this. YMMV.*
 4. `cp -r node_modules/moorhen/baby-gru ./public/`
 5.  Build the app  
   * `npm run make-mac-m1` to make an M1 macOS app and redistributable zip (tested on M1 Mac)
