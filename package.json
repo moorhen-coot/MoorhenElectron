@@ -34,7 +34,13 @@
           "^/nginx",
           "^/nodemon.json",
           "^/out",
-          "^/src$"
+          "^/src/App.css",
+          "^/src/App.tsx",
+          "^/src/index.css",
+          "^/src/index.tsx",
+          "^/src/reportWebVitals.js",
+          "^/src/setupProxy.js",
+          "^/src/types"
         ],
         "icon": "src/icons/icon",
         "name": "Moorhen"
