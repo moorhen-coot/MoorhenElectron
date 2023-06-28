@@ -47,10 +47,16 @@ To do this:
 5. `rm -fr build out node_modules package-lock.json`
 6. Follow steps 3-5 of the **Build Instruction** at the top of this README.
 
+## **Using a complete CCP4/Refmac monomer library(Advanced)**
+
+Before doing steps 3-5 of **Build Instruction**, replace `public/baby-gru/monomers` with a complete copy of the monomer linbrary from a CCP4 installation or from the [LMB github repository](https://github.com/MonomerLibrary/monomers). If you have already built, then do as steps 5-6 of previous section (**Updating the Moorhen module**).
+
 ## **References**
 
 * Coot
     * P. Emsley; B. Lohkamp; W.G. Scott; Cowtan (2010). *Features and Development of Coot*, Acta Crystallographica. **D66 (4)** p486–501.
 * Moorhen
     * [Moorhen](https://github.com/stuartjamesmcnicholas/Moorhen/) a web browser molecular graphics program based on the Coot desktop program.
+* CCP4
+    * Winn MD, Ballard CC, Cowtan KD, Dodson EJ, Emsley P, Evans PR, Keegan RM, Krissinel EB, Leslie AGW, McCoy A, McNicholas SJ, Murshudov GN, Pannu NS, Potterton EA, Powell HR, Read RJ, Vagin A, Wilson KS (2011), *Overview of the CCP4 suite and current developments*, Acta Cryst **D67**, p235–242.
   
