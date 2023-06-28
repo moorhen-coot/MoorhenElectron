@@ -31,6 +31,22 @@ and then copy the zip file to a Windows, machine and unzip.
 * **Linux** The Linux zip file can (under most circumstances) be simply copied to another machine and unzipped. The `Moorhen` executable on the unzippped directory can then be run.
 * **Windows** After zipping up the Windows folder (previous section), copy to new machine and unzip. You should be able to tun `Moorhen.exe` in the unpacked directory. You may need to use the `--no-sandbox` option.
 
+## **Updating the Moorhen module (Advanced)**
+
+This project contains a snanshot of (most of) the Moorhen browser based program in the tar file `moorhen-0.0.1.tgz`. It is possible to replace this with a newer version. 
+
+To do this:
+1. Build Moorhen, see the [compilation instrations](https://github.com/stuartjamesmcnicholas/Moorhen/).
+2. In the Moorhen build directory do:  
+`cd baby-gru`  
+`npm run-script build-npm-registry`  
+`cd dist`  
+`npm pack  `  
+3. Then copy the new tar file `moorhen-0.0.1.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).
+4. `cd` back to this project
+5. `rm -fr build out node_modules package-lock.json`
+6. Follow steps 3-5 of the **Build Instruction** at the top of this README.
+
 ## **References**
 
 * Coot
