@@ -13,7 +13,7 @@ an Electron App version of Moorhen.
    `cp -r node_modules/moorhen/moorhen.css ./src/`
 5.  Build the app  
   * `npm run make-mac-m1` to make an M1 macOS app and redistributable zip (tested on M1 Mac)
-  * `npm run make-mac` to make an Intel macOS app and redistributable zip (tested on M1 and Intel Macs)
+  * `npm run make-mac-intel` to make an Intel macOS app and redistributable zip (tested on M1 and Intel Macs)
   * `npm run make-linux` to make an Linux macOS app and redistributable zip (tested on Linux)
   * `npm run package-win32` to make a Windows app (tested on *Linux*)
 
@@ -50,7 +50,7 @@ To do this:
 
 ## **Using a complete CCP4/Refmac monomer library(Advanced)**
 
-Before doing steps 3-5 of **Build Instruction**, replace `public/baby-gru/monomers` with a complete copy of the monomer linbrary from a CCP4 installation or from the [LMB github repository](https://github.com/MonomerLibrary/monomers). If you have already built, then do as steps 5-6 of previous section (**Updating the Moorhen module**).
+Before doing step 5 of **Build Instruction**, replace `public/baby-gru/monomers` with a complete copy of the monomer linbrary from a CCP4 installation or from the [LMB github repository](https://github.com/MonomerLibrary/monomers).
 
 ## **References**
 
