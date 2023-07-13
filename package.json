@@ -131,6 +131,7 @@
     "electron": "wait-on tcp:3000 && electron-forge start",
     "package": "react-scripts build && electron-forge package",
     "make-mac": "react-scripts build && electron-forge make --platform darwin",
+    "make-mac-intel": "react-scripts build && electron-forge make --arch=x64 --platform darwin",
     "make-mac-m1": "react-scripts build && electron-forge make  --arch=arm64 --platform darwin",
     "make-linux": "react-scripts build && electron-forge make --platform linux",
     "make-win32": "react-scripts build && electron-forge make --platform win32",
