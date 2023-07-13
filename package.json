@@ -85,7 +85,7 @@
     "html-react-parser": "^1.4.14",
     "jquery": "^3.6.0",
     "localforage": "^1.10.0",
-    "moorhen": "file:moorhen-0.0.1.tgz",
+    "moorhen": "file:moorhen-0.2.0.tgz",
     "multer": "^1.4.5-lts.1",
     "nested-worker": "git+https://github.com/johanholmerin/nested-worker.git#semver:^1.0.0",
     "nightingale-linegraph-track": "^3.8.10",

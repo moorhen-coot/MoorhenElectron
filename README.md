@@ -34,7 +34,7 @@ and then copy the zip file to a Windows, machine and unzip.
 
 ## **Updating the Moorhen module (Advanced)**
 
-This project contains a snanshot of (most of) the Moorhen browser based program in the tar file `moorhen-0.0.1.tgz`. It is possible to replace this with a newer version. 
+This project contains a snanshot of (most of) the Moorhen browser based program in the tar file `moorhen-0.2.0.tgz`. It is possible to replace this with a newer version. 
 
 To do this:
 1. Build Moorhen, see the [compilation instrations](https://github.com/stuartjamesmcnicholas/Moorhen/).
@@ -43,7 +43,7 @@ To do this:
 `npm run-script build-npm-registry`  
 `cd dist`  
 `npm pack  `  
-3. Then copy the new tar file `moorhen-0.0.1.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).
+3. Then copy the new tar file `moorhen-0.2.0.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).
 4. `cd` back to this project
 5. `rm -fr build out node_modules package-lock.json`
 6. Follow steps 3-5 of the **Build Instruction** at the top of this README.
