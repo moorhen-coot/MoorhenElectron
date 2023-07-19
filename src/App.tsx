@@ -1,13 +1,13 @@
 import './App.css';
 import './moorhen.css';
-import { MoorhenApp } from 'moorhen';
+import { MoorhenContainer } from 'moorhen';
 import { MoorhenContextProvider } from "moorhen";
 
 function App() {
   return (
     <div className="App">
       <MoorhenContextProvider>
-        <MoorhenApp/>
+        <MoorhenContainer/>
       </MoorhenContextProvider>
     </div>
   );
