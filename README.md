@@ -1,7 +1,7 @@
 # MoorhenElectron
 An Electron version of the Moorhen molecular graphics program.
 
-[Moorhen](https://github.com/moorhen-coot/Moorhen/)is a web browser molecular graphics program based on the Coot desktop program. This project is
+[Moorhen](https://github.com/moorhen-coot/Moorhen/) is a web browser molecular graphics program based on the Coot desktop program. This project is
 an Electron App version of Moorhen.
 
 ## **Build Instructions**
