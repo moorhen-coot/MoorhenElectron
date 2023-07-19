@@ -1,12 +1,12 @@
 # MoorhenElectron
 An Electron version of the Moorhen molecular graphics program.
 
-[Moorhen](https://github.com/stuartjamesmcnicholas/Moorhen/)is a web browser molecular graphics program based on the Coot desktop program. This project is
+[Moorhen](https://github.com/moorhen-coot/Moorhen/)is a web browser molecular graphics program based on the Coot desktop program. This project is
 an Electron App version of Moorhen.
 
 ## **Build Instructions**
 
-1. `git clone https://github.com/stuartjamesmcnicholas/MoorhenElectron.git`
+1. `git clone https://github.com/moorhen-coot/MoorhenElectron.git`
 2. `cd MoorhenElectron`
 3. `npm install` *I have had most success with emscripten provided npm/node when doing this. YMMV.*
 4. `cp -r node_modules/moorhen/baby-gru ./public/`  
@@ -37,7 +37,7 @@ and then copy the zip file to a Windows, machine and unzip.
 This project contains a snanshot of (most of) the Moorhen browser based program in the tar file `moorhen-0.2.0.tgz`. It is possible to replace this with a newer version. 
 
 To do this:
-1. Build Moorhen, see the [compilation instrations](https://github.com/stuartjamesmcnicholas/Moorhen/).
+1. Build Moorhen, see the [compilation instrations](https://github.com/moorhen-coot/Moorhen/).
 2. In the Moorhen build directory do:  
 `cd baby-gru`  
 `npm run-script build-npm-registry`  
@@ -91,7 +91,7 @@ This will ask the Moorhen Electron app to load:
 * Coot
     * P. Emsley; B. Lohkamp; W.G. Scott; Cowtan (2010). *Features and Development of Coot*, Acta Crystallographica. **D66 (4)** p486–501.
 * Moorhen
-    * [Moorhen](https://github.com/stuartjamesmcnicholas/Moorhen/) a web browser molecular graphics program based on the Coot desktop program.
+    * [Moorhen](https://github.com/moorhen-coot/Moorhen/) a web browser molecular graphics program based on the Coot desktop program.
 * CCP4
     * Winn MD, Ballard CC, Cowtan KD, Dodson EJ, Emsley P, Evans PR, Keegan RM, Krissinel EB, Leslie AGW, McCoy A, McNicholas SJ, Murshudov GN, Pannu NS, Potterton EA, Powell HR, Read RJ, Vagin A, Wilson KS (2011), *Overview of the CCP4 suite and current developments*, Acta Cryst **D67**, p235–242.
   
