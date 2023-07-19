@@ -52,7 +52,7 @@ To do this:
 
 Before doing step 5 of **Build Instruction**, replace `public/baby-gru/monomers` with a complete copy of the monomer linbrary from a CCP4 installation or from the [LMB github repository](https://github.com/MonomerLibrary/monomers).
 
-## **Creating a remote contolled Electron App (Advanced)**
+## **Creating a remote controlled Electron App (Advanced)**
 
 This repository also contains code that would allow you to create an Electron Moorhen that you can partially remotely
 control. Specifically you can request loading of coordinate files by "telling" the server to load a particular URL.
