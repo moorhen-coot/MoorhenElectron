@@ -83,7 +83,8 @@ After that then just rebuild the Electron app. e.g. `npm run make-mac-m1`.
 
 With that done, when the app is running you can request it to load a file from a URL with a server request such as:  
 `http://localhost:32778/load/protocal/https/server/www.ebi.ac.uk/path/pdbe/entry-files/download/8fcb.cif`  
-This will ask the Moorhen Electron app to load:
+You can do this by simply typing the above URL into a web browser on the same machine that the electron app is running.  
+This will ask the Moorhen Electron app to load:  
 `https://www.ebi.ac.uk/pdbe/entry-files/download/8fcb.cif` .
 
 ## **References**
