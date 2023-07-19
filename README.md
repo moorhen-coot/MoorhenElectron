@@ -60,7 +60,7 @@ To do this, there are a couple of custom steps:
 1. `cp remote_control_example/electron.js  public`  
 This replaces the server part of the app with one which interprets certain requests as instructions to load files. These instructions are stored in a variable until the client grabs the requests.
 2. Edit `src/App.tsx` to be the following (just 2 line edit from original):  
-`import './App.css';
+```import './App.css';
 import './moorhen.css';
 import { MoorhenContainer } from 'moorhen';
 import {MoorhenRemoteControl} './MoorhenRemoteControl'
@@ -77,7 +77,7 @@ function App() {
 }
 
 export default App;
-`
+```
 
 After that then just rebuild the Electron app. e.g. `npm run make-mac-m1`.
 
