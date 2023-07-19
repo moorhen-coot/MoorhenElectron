@@ -52,6 +52,40 @@ To do this:
 
 Before doing step 5 of **Build Instruction**, replace `public/baby-gru/monomers` with a complete copy of the monomer linbrary from a CCP4 installation or from the [LMB github repository](https://github.com/MonomerLibrary/monomers).
 
+## **Creating a remote contolled Electron App (Advanced)**
+
+This repository also contains code that would allow you to create an Electron Moorhen that you can partially remotely
+control. Specifically you can request loading of coordinate files by "telling" the server to load a particular URL.
+To do this, there are a couple of custom steps:
+1. `cp remote_control_example/electron.js  public`  
+This replaces the server part of the app with one which interprets certain requests as instructions to load files. These instructions are stored in a variable until the client grabs the requests.
+2. Edit `src/App.tsx` to be the following (just 2 line edit from original):  
+`import './App.css';
+import './moorhen.css';
+import { MoorhenContainer } from 'moorhen';
+import {MoorhenRemoteControl} './MoorhenRemoteControl'
+import { MoorhenContextProvider } from "moorhen";
+
+function App() {
+  return (
+    <div className="App">
+      <MoorhenContextProvider>
+        <MoorhenRemoteControl/>
+      </MoorhenContextProvider>
+    </div>
+  );
+}
+
+export default App;
+`
+
+After that then just rebuild the Electron app. e.g. `npm run make-mac-m1`.
+
+With that done, when the app is running you can request it to load a file from a URL with a server request such as:  
+`http://localhost:32778/load/protocal/https/server/www.ebi.ac.uk/path/pdbe/entry-files/download/8fcb.cif`  
+This will ask the Moorhen Electron app to load:
+`https://www.ebi.ac.uk/pdbe/entry-files/download/8fcb.cif` .
+
 ## **References**
 
 * Coot
