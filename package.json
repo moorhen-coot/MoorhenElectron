@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -85,7 +85,7 @@
     "html-react-parser": "^1.4.14",
     "jquery": "^3.6.0",
     "localforage": "^1.10.0",
-    "moorhen": "file:moorhen-0.2.0.tgz",
+    "moorhen": "file:moorhen-0.3.1.tgz",
     "multer": "^1.4.5-lts.1",
     "nested-worker": "git+https://github.com/johanholmerin/nested-worker.git#semver:^1.0.0",
     "nightingale-linegraph-track": "^3.8.10",
