@@ -20,8 +20,8 @@ an Electron App version of Moorhen.
 `make-win32` should also work, but is not recommended since it may be desirable to replace the minimal copy of the CCP4/refmac monomer library `public/baby-gru/monomers` with a complete copy. Under these circumstances `make-win32` hangs. One can always zip the result of `package-win32` by hand.
 
 The built app appears in the `out` directory:  
- * **Mac** `out/Moorhen-darwin-arm64/Moorhen.app/` for M1 Mac. This can then be run with `open out/Moorhen-darwin-arm64/Moorhen.app/`, or opening `out/Moorhen-darwin-arm64/` in Finder and double clicking on `Moorhen.app`, etc. The zip file is `out/make/zip/darwin/arm64/Moorhen-darwin-arm64-0.3.1.zip`
- * **Linux** `out/Moorhen-linux-x64/Moorhen` for Linux. You can simply run this executable. The zip file is `out/make/zip/linux/x64/Moorhen-linux-x64-0.3.1.zip`.
+ * **Mac** `out/Moorhen-darwin-arm64/Moorhen.app/` for M1 Mac. This can then be run with `open out/Moorhen-darwin-arm64/Moorhen.app/`, or opening `out/Moorhen-darwin-arm64/` in Finder and double clicking on `Moorhen.app`, etc. The zip file is `out/make/zip/darwin/arm64/Moorhen-darwin-arm64-0.5.1.zip`
+ * **Linux** `out/Moorhen-linux-x64/Moorhen` for Linux. You can simply run this executable. The zip file is `out/make/zip/linux/x64/Moorhen-linux-x64-0.5.1.zip`.
  * **Windows** `out/Moorhen-win32-x64/Moorhen.exe` for Windows. Building of this has only been tested on Linux, so you will neeed to copy the whole `out/Moorhen-win32-x64/` directory to a Windows machine to test. The best way to do this is probably  
 `cd out/Moorhen-win32-x64/`  
 `zip -r Moorhen-win32-x64.zip out/Moorhen-win32-x64/`  
@@ -34,16 +34,16 @@ and then copy the zip file to a Windows, machine and unzip.
 
 ## **Updating the Moorhen module (Advanced)**
 
-This project contains a snanshot of (most of) the Moorhen browser based program in the tar file `moorhen-0.3.1.tgz`. It is possible to replace this with a newer version. 
+This project contains a snanshot of (most of) the Moorhen browser based program in the tar file `moorhen-0.5.1.tgz`. It is possible to replace this with a newer version. 
 
 To do this:
-1. Build Moorhen, see the [compilation instrations](https://github.com/moorhen-coot/Moorhen/).
+1. Build Moorhen, see the [compilation instructions](https://github.com/moorhen-coot/Moorhen/).
 2. In the Moorhen build directory do:  
 `cd baby-gru`  
 `npm run-script build-npm-registry`  
 `cd dist`  
 `npm pack  `  
-3. Then copy the new tar file `moorhen-0.3.1.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).
+3. Then copy the new tar file `moorhen-0.5.1.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).
 4. `cd` back to this project
 5. `rm -fr build out node_modules package-lock.json`
 6. Follow steps 3-5 of the **Build Instruction** at the top of this README.
