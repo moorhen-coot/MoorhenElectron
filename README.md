@@ -23,8 +23,8 @@ The built app appears in the `out` directory:
  * **Mac** `out/Moorhen-darwin-arm64/Moorhen.app/` for M1 Mac. This can then be run with `open out/Moorhen-darwin-arm64/Moorhen.app/`, or opening `out/Moorhen-darwin-arm64/` in Finder and double clicking on `Moorhen.app`, etc. The zip file is `out/make/zip/darwin/arm64/Moorhen-darwin-arm64-0.5.1.zip`
  * **Linux** `out/Moorhen-linux-x64/Moorhen` for Linux. You can simply run this executable. The zip file is `out/make/zip/linux/x64/Moorhen-linux-x64-0.5.1.zip`.
  * **Windows** `out/Moorhen-win32-x64/Moorhen.exe` for Windows. Building of this has only been tested on Linux, so you will neeed to copy the whole `out/Moorhen-win32-x64/` directory to a Windows machine to test. The best way to do this is probably  
-`cd out/Moorhen-win32-x64/`  
-`zip -r Moorhen-win32-x64.zip out/Moorhen-win32-x64/`  
+`cd out`  
+`zip -r Moorhen-win32-x64.zip Moorhen-win32-x64/`  
 and then copy the zip file to a Windows, machine and unzip.
  
 ## **Moving built files to other machines**
