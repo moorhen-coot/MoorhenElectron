@@ -40,7 +40,7 @@ To do this:
 1. Build Moorhen, see the [compilation instructions](https://github.com/moorhen-coot/Moorhen/).
 2. In the Moorhen build directory do:  
 `cd baby-gru`  
-`npm run-script build-npm-registry`  
+`npm run-script build-release`  
 `cd dist`  
 `npm pack  `  
 3. Then copy the new tar file `moorhen-0.5.1.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).

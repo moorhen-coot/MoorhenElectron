@@ -1,14 +1,14 @@
 import './App.css';
 import './moorhen.css';
 import { MoorhenContainer } from 'moorhen';
-import { MoorhenContextProvider } from "moorhen";
+import { MoorhenReduxProvider } from "moorhen";
 
 function App() {
   return (
     <div className="App">
-      <MoorhenContextProvider>
+      <MoorhenReduxProvider>
         <MoorhenContainer/>
-      </MoorhenContextProvider>
+      </MoorhenReduxProvider>
     </div>
   );
 }
