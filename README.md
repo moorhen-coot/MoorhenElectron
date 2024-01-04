@@ -67,14 +67,14 @@ This replaces the server part of the app with one which interprets certain reque
 import './moorhen.css';
 import { MoorhenContainer } from 'moorhen';
 import {MoorhenRemoteControl} './MoorhenRemoteControl'
-import { MoorhenContextProvider } from "moorhen";
+import { MoorhenReduxProvider } from "moorhen";
 
 function App() {
   return (
     <div className="App">
-      <MoorhenContextProvider>
+      <MoorhenReduxProvider>
         <MoorhenRemoteControl/>
-      </MoorhenContextProvider>
+      </MoorhenReduxProvider>
     </div>
   );
 }
