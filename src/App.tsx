@@ -2,8 +2,8 @@ import { useRef } from 'react';
 
 import './App.css';
 import './moorhen.css';
-import { MoorhenContainer } from 'moorhen';
-import { MoorhenReduxProvider } from "moorhen";
+import { MoorhenContainer, MoorhenReduxStore } from 'moorhen';
+import { Provider } from 'react-redux';
 
 function App() {
   const glRef = useRef(null)
@@ -13,9 +13,9 @@ function App() {
     }
   return (
     <div className="App">
-      <MoorhenReduxProvider>
+      <Provider store={MoorhenReduxStore}> 
         <MoorhenContainer  {...collectedProps}/>
-      </MoorhenReduxProvider>
+      </Provider>
     </div>
   );
 }
