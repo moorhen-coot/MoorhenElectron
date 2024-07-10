@@ -66,15 +66,16 @@ This replaces the server part of the app with one which interprets certain reque
 ```import './App.css';
 import './moorhen.css';
 import { MoorhenContainer } from 'moorhen';
+import { MoorhenContainer, MoorhenReduxStore } from 'moorhen';
+import { Provider } from 'react-redux';
 import {MoorhenRemoteControl} './MoorhenRemoteControl'
-import { MoorhenReduxProvider } from "moorhen";
 
 function App() {
   return (
     <div className="App">
-      <MoorhenReduxProvider>
+      <Provider store={MoorhenReduxStore}> 
         <MoorhenRemoteControl/>
-      </MoorhenReduxProvider>
+      </Provider>
     </div>
   );
 }
