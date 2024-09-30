@@ -28,19 +28,20 @@
     if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
   </script>
 
-  <script src="%PUBLIC_URL%/web_example.js"></script>
+  <script src="%PUBLIC_URL%/moorhen.js"></script>
 
   <!--Here some imports and actions to make some simple crystallographic logic available to the 
 main UI thread (as opposed to the CootWorker)-->
   <script>
     window.onload = () => {
       if (!crossOriginIsolated) SharedArrayBuffer = ArrayBuffer;
-      createCCP4Module({
+      createCootModule({
         print(t) { console.log(["output", t]) },
         printErr(t) { console.log(["output", t]); }
       })
         .then(function (CCP4Mod) {
           window.CCP4Module = CCP4Mod;
+          window.cootModule = CCP4Mod;
         })
         .catch((e) => {
           console.log("CCP4 problem :(");
