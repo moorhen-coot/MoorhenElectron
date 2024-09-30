@@ -1,13 +1,13 @@
 {
   "name": "moorhen-electron",
-  "version": "0.11.3",
+  "version": "0.12.0",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
-  "author": "Paul Emsley, Filomeno Sanchez Rodriguez, Martin Noble, Stuart McNicholas",
+  "author": "Paul Emsley, Filomeno Sanchez Rodriguez, Martin Noble, Stuart McNicholas, Lucrezia Catapano, Jakub Smulski",
   "description": "Moorhen molecular graphics",
   "bugs": {
-    "url": "https://github.com/stuartjamesmcnicholas/Moorhen/issues"
+    "url": "https://github.com/moorhen-coot/Moorhen/issues"
   },
   "keywords": [
     "molecular graphics",
@@ -85,7 +85,7 @@
     "html-react-parser": "^1.4.14",
     "jquery": "^3.6.0",
     "localforage": "^1.10.0",
-    "moorhen": "https://github.com/moorhen-coot/Moorhen/releases/download/v0.11.3/moorhen-0.11.3.tgz",
+    "moorhen": "https://github.com/moorhen-coot/Moorhen/releases/download/v0.12.0/moorhen-0.12.0.tgz",
     "multer": "^1.4.5-lts.1",
     "nested-worker": "git+https://github.com/johanholmerin/nested-worker.git#semver:^1.0.0",
     "nightingale-linegraph-track": "^3.8.10",
