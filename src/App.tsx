@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { MoorhenContainer, MoorhenMolecule, MoorhenMap, MoorhenMoleculeSelect, addMolecule, MoorhenDraggableModalBase, addMap, setActiveMap, MoorhenReduxStore } from 'moorhen';
 import { InputGroup, Modal, NavDropdown } from 'react-bootstrap';
 import { Avatar, Button, Link, MenuItem, Typography } from '@mui/material';
-import $ from 'jquery';
 import { useDispatch, useSelector } from 'react-redux'
 import { Provider } from 'react-redux';
 
