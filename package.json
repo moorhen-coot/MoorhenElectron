@@ -40,6 +40,8 @@
           "^/src/index.tsx",
           "^/src/reportWebVitals.js",
           "^/src/setupProxy.js",
+          "^/load_all_files_example",
+          "^/remote_control_example",
           "^/src/types"
         ],
         "icon": "src/icons/icon",
