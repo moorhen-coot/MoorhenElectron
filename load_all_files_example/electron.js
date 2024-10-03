@@ -55,12 +55,13 @@ function createWindow() {
 
           exp.use(express.static(path.join(__dirname,"..","build")));
       
-          exp.get('/foo/*', (req, res) => {
+          const loadAllCommand = "load_all_from_dir";
+          exp.get('/'+loadAllCommand+'/*', (req, res) => {
               console.log(req.url);
               let result = [];
-              fs.readdirSync(req.url.substr(4)).forEach(file => {
+              fs.readdirSync(req.url.substr(loadAllCommand.length+1)).forEach(file => {
                   console.log(file);
-                  const data = fs.readFileSync(req.url.substr(4)+file);
+                  const data = fs.readFileSync(req.url.substr(loadAllCommand.length+1)+'/'+file);
                   console.log(data.length);
                   result.push({name: file, data:data});
               });

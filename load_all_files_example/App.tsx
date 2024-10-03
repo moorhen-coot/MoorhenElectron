@@ -3,30 +3,30 @@ import { useEffect } from 'react';
 import { MoorhenContainer, MoorhenMolecule, MoorhenMap, MoorhenMoleculeSelect, addMolecule, MoorhenDraggableModalBase, addMap, setActiveMap, MoorhenReduxStore } from 'moorhen';
 import { InputGroup, Modal, NavDropdown } from 'react-bootstrap';
 import { Avatar, Button, Link, MenuItem, Typography } from '@mui/material';
-import $ from 'jquery';
 import { useDispatch, useSelector } from 'react-redux'
 import { Provider } from 'react-redux';
+import { Form } from "react-bootstrap";
 
 import './App.css';
 import './moorhen.css';
 
 export const MyMoorhenContainer = (props) => {
 
-  const glRef = useRef(null)
-  const [appTitle, setAppTitle] = useState('MoorhenElectron')
+    const glRef = useRef(null)
+    const [appTitle, setAppTitle] = useState('MoorhenElectron')
 
-  const commandCentre = useRef(null)
+    const commandCentre = useRef(null)
 
-  const moleculesRef = useRef(null)
-  const mapsRef = useRef(null)
+    const moleculesRef = useRef(null)
+    const mapsRef = useRef(null)
 
-  const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-  const collectedProps = {
+    const collectedProps = {
         glRef,  commandCentre, moleculesRef, mapsRef
-  }
+    }
 
-  const readPdbFile = async (fileContents: any): Promise<MoorhenMolecule> => {
+    const readPdbFile = async (fileContents: any): Promise<MoorhenMolecule> => {
         const newMolecule = new MoorhenMolecule(commandCentre, glRef)
 
         const defaultBondSmoothness =  MoorhenReduxStore.getState().sceneSettings.defaultBondSmoothness
@@ -49,11 +49,10 @@ export const MyMoorhenContainer = (props) => {
               return newMolecule
         })
         return newMolecule
-  }
+    }
 
-  const doClick = async(evt) => {
-      console.log('Click!')
-      const response = await fetch(`http://localhost:32778/foo/Users/stuart/gamma_models/`)
+    const loadDir = async(dirname) => {
+      const response = await fetch(`http://localhost:32778/load_all_from_dir/`+dirname)
       const responseText = await response.text()
       const responseArray : any[] = JSON.parse(responseText)
       let readPromises: Promise<MoorhenMolecule>[] = []
@@ -77,15 +76,28 @@ export const MyMoorhenContainer = (props) => {
               Promise.resolve(molecule.molNo)
           })
       }
-  }
+    }
 
-  const exportMenuItem = <MenuItem key={'example-key'} id='example-menu-item' onClick={doClick}>
-                              Load all in directory..
-                         </MenuItem>
+    const loadPdbFiles = async (files: FileList) => {
+        console.log("Hello")
+        let pathList = []
+        Array.prototype.forEach.call(files, file => {
+            console.log(file.path)
+            pathList.push(file.path.split("/").slice(0,-1).join("/"))
+        })
+        const unique = pathList.filter((value, index, array) => array.indexOf(value) === index);
+        console.log(unique)
+        unique.forEach(dirname => {
+            loadDir(dirname)
+        })
+    }
 
-    return (
-        <MoorhenContainer  extraFileMenuItems={[exportMenuItem]} {...collectedProps}/>
-        )
+    const exportMenuItem = <Form.Group className='moorhen-form-group' controlId="upload-coordinates-form">
+                           <Form.Label>Load all..</Form.Label>
+                           <Form.Control type="file"  multiple={true} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { loadPdbFiles(e.target.files) }}/>
+                           </Form.Group>
+
+    return <MoorhenContainer  extraFileMenuItems={[exportMenuItem]} {...collectedProps}/>
 
 }
 
