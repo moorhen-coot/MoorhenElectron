@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -83,7 +83,7 @@
     "gl-matrix": "^3.4.3",
     "html-react-parser": "^1.4.14",
     "localforage": "^1.10.0",
-    "moorhen": "https://github.com/moorhen-coot/Moorhen/releases/download/v0.12.2/moorhen-0.12.2.tgz",
+    "moorhen": "https://github.com/moorhen-coot/Moorhen/releases/download/v0.12.3/moorhen-0.12.3.tgz",
     "nested-worker": "git+https://github.com/johanholmerin/nested-worker.git#semver:^1.0.0",
     "nightingale-linegraph-track": "^3.8.10",
     "pako": "^2.0.4",
