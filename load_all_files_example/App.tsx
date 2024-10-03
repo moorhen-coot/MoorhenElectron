@@ -26,6 +26,24 @@ export const MyMoorhenContainer = (props) => {
         glRef,  commandCentre, moleculesRef, mapsRef
     }
 
+    const readMtzFile = async (fileContents: any, isDiff: boolean): Promise<MoorhenMap> => {
+        const newMap = new MoorhenMap(commandCentre, glRef)
+        console.log("Attempting to read data named",fileContents.name)
+        const chunkSize = 65536
+        let selectedMtzColumns
+        if(isDiff)
+            selectedMtzColumns = { F: "DELFWT", PHI: "PHDELWT", isDifference: true, useWeight: false }
+        else
+            selectedMtzColumns = { F: "FWT", PHI: "PHWT", isDifference: false, useWeight: false, calcStructFact: true }
+        newMap.loadToCootFromMtzData(fileContents.data.data, fileContents.name, selectedMtzColumns)
+          .then(async reply => {
+              dispatch(addMap(reply))
+              dispatch(setActiveMap(reply))
+              return newMap
+        })
+        return newMap
+    }
+
     const readPdbFile = async (fileContents: any): Promise<MoorhenMolecule> => {
         const newMolecule = new MoorhenMolecule(commandCentre, glRef)
 
@@ -56,10 +74,15 @@ export const MyMoorhenContainer = (props) => {
       const responseText = await response.text()
       const responseArray : any[] = JSON.parse(responseText)
       let readPromises: Promise<MoorhenMolecule>[] = []
+      let readMapPromises: Promise<MoorhenMap>[] = []
 
       responseArray.forEach(file => {
           if(file.name.endsWith(".pdb")){
             readPromises.push(readPdbFile(file))
+          }
+          if(file.name.endsWith(".mtz")){
+            readMapPromises.push(readMtzFile(file,true))
+            readMapPromises.push(readMtzFile(file,false))
           }
       })
 
@@ -74,6 +97,20 @@ export const MyMoorhenContainer = (props) => {
           console.log("Loaded?",newMolecules)
           newMolecules.forEach(molecule => {
               Promise.resolve(molecule.molNo)
+          })
+      }
+
+      let newMaps: MoorhenMap[] = await Promise.all(readMapPromises)
+      console.log(newMaps.length,"maps")
+      if (!newMaps.every(map => map.molNo !== -1)) {
+          console.log("Failed to read map")
+          newMaps = newMaps.filter(map => map.molNo !== -1)
+          if (newMaps.length === 0) {
+              return
+          }
+          console.log("Loaded?",newMaps)
+          newMaps.forEach(map => {
+              Promise.resolve(map.molNo)
           })
       }
     }
