@@ -121,7 +121,7 @@
     "concurrently": "^7.6.0",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
-    "electron": "^31.6.0",
+    "electron": "^32.1.2",
     "electron-devtools-installer": "^3.2.0",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^3.1.7",
