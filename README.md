@@ -46,7 +46,7 @@ To do this:
 3. Then copy the new tar file `moorhen-x.y.z.tgz` produced in `baby-gru/dist/` into the top-level directory of *this* project (Moorhen Electron).
 4. `cd` back to this project
 5. `rm -fr build out node_modules package-lock.json`
-6. Edit `package.json` to change `"moorhen": "https://github.com/moorhen-coot/Moorhen/releases/download/v0.9.3/moorhen-0.9.3.tgz"` to the correct version number (`file:///full_path_to/moorhen-x.y.z.tgz`)
+6. Edit `package.json` to change `"moorhen": "^0.12.3"` to the local file (`"moorhen": "file:///full_path_to/moorhen-x.y.z.tgz"`)
 7. Follow steps 3-5 of the **Build Instruction** at the top of this README.
 
 ## **Using a complete CCP4/Refmac monomer library(Advanced)**
