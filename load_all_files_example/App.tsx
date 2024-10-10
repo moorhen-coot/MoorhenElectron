@@ -1,11 +1,7 @@
-import { useRef, useState, useReducer } from 'react';
-import { useEffect } from 'react';
-import { MoorhenContainer, MoorhenMolecule, MoorhenMap, MoorhenMoleculeSelect, addMolecule, MoorhenDraggableModalBase, addMap, setActiveMap, MoorhenReduxStore } from 'moorhen';
-import { InputGroup, Modal, NavDropdown } from 'react-bootstrap';
-import { Avatar, Button, Link, MenuItem, Typography } from '@mui/material';
-import { useDispatch, useSelector } from 'react-redux'
-import { Provider } from 'react-redux';
-import { Form } from "react-bootstrap";
+import { useRef, useState, MouseEventHandler } from 'react';
+import { useDispatch, Provider } from 'react-redux'
+import { Form, Button, InputGroup } from "react-bootstrap";
+import { MoorhenContainer, MoorhenMolecule, MoorhenMap, addMolecule, addMap, setActiveMap, MoorhenReduxStore } from 'moorhen';
 
 import './App.css';
 import './moorhen.css';
@@ -14,6 +10,8 @@ export const MyMoorhenContainer = (props) => {
 
     const glRef = useRef(null)
     const [appTitle, setAppTitle] = useState('MoorhenElectron')
+
+    const pathRef = useRef<HTMLInputElement>()
 
     const commandCentre = useRef(null)
 
@@ -115,23 +113,17 @@ export const MyMoorhenContainer = (props) => {
       }
     }
 
-    const loadPdbFiles = async (files: FileList) => {
-        console.log("Hello")
-        let pathList = []
-        Array.prototype.forEach.call(files, file => {
-            console.log(file.path)
-            pathList.push(file.path.split("/").slice(0,-1).join("/"))
-        })
-        const unique = pathList.filter((value, index, array) => array.indexOf(value) === index);
-        console.log(unique)
-        unique.forEach(dirname => {
-            loadDir(dirname)
-        })
+    const loadFilesOnServer = async () => {
+        console.log(pathRef.current.value)
+        loadDir(pathRef.current.value)
     }
 
-    const exportMenuItem = <Form.Group className='moorhen-form-group' controlId="upload-coordinates-form">
-                           <Form.Label>Load all..</Form.Label>
-                           <Form.Control type="file"  multiple={true} onChange={(e: React.ChangeEvent<HTMLInputElement>) => { loadPdbFiles(e.target.files) }}/>
+    const exportMenuItem = <Form.Group className='moorhen-form-group' controlId="CustomLoadAllInServerDirectory">
+                           <Form.Label>Load all in server directory:</Form.Label>
+                           <InputGroup>
+                           <Form.Control ref={pathRef} type="text" />
+                           <Button variant="secondary"  onClick={loadFilesOnServer}>Load</Button>
+                           </InputGroup>
                            </Form.Group>
 
     return <MoorhenContainer  extraFileMenuItems={[exportMenuItem]} {...collectedProps}/>
