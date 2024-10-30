@@ -83,8 +83,11 @@
     "package": "react-scripts build && electron-forge package",
     "make-mac": "react-scripts build && electron-forge make --platform darwin",
     "make-mac-intel": "react-scripts build && electron-forge make --arch=x64 --platform darwin",
-    "make-mac-m1": "react-scripts build && electron-forge make  --arch=arm64 --platform darwin",
+    "make-mac-m1": "react-scripts build && electron-forge make --arch=arm64 --platform darwin",
+    "make-mac-arm": "react-scripts build && electron-forge make --arch=arm64 --platform darwin",
     "make-linux": "react-scripts build && electron-forge make --platform linux",
+    "make-linux-intel": "react-scripts build && electron-forge make --arch=x64 --platform linux",
+    "make-linux-arm": "react-scripts build && electron-forge make --arch=arm64 --platform linux",
     "make-win32": "react-scripts build && electron-forge make --platform win32",
     "package-win32": "react-scripts build && electron-forge package --platform win32"
   },
