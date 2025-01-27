@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "0.16.2",
+  "version": "0.16.3",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -109,7 +109,7 @@
     ]
   },
   "devDependencies": {
-    "moorhen": "^0.16.2",
+    "moorhen": "^0.16.3",
     "@electron-forge/cli": "^6.0.5",
     "@electron-forge/maker-deb": "^6.0.5",
     "@electron-forge/maker-rpm": "^6.0.5",
