@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "0.17.1",
+  "version": "0.17.1-reactscript.1",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -73,7 +73,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start-tsc": "npx nodemon --trace-warnings",
-    "build": "react-scripts build",
+    "build": "cp -a node_modules/moorhen/public/* public/;cp -r node_modules/moorhen/moorhen.css ./src/ ;react-scripts build",
     "build-cloud-dev": "webpack  --mode development --devtool inline-source-map",
     "build-cloud": "webpack --mode production",
     "test": "react-scripts test",
@@ -89,6 +89,7 @@
     "make-linux-intel": "react-scripts build && electron-forge make --arch=x64 --platform linux",
     "make-linux-arm": "react-scripts build && electron-forge make --arch=arm64 --platform linux",
     "make-win32": "react-scripts build && electron-forge make --platform win32",
+    "zip-win32": "react-scripts make-win32 && cd out && zip -r Moorhen-${npm_package_version}-win32-x64.zip",
     "package-win32": "react-scripts build && electron-forge package --platform win32"
   },
   "eslintConfig": {
