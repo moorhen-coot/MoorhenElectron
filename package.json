@@ -89,7 +89,7 @@
     "make-linux-intel": "react-scripts build && electron-forge make --arch=x64 --platform linux",
     "make-linux-arm": "react-scripts build && electron-forge make --arch=arm64 --platform linux",
     "make-win32": "react-scripts build && electron-forge make --platform win32",
-    "zip-win32": "react-scripts make-win32 && cd out && zip -r Moorhen-${npm_package_version}-win32-x64.zip",
+    "zip-win32": "react-scripts package-win32 && cd out && zip -r Moorhen-${npm_package_version}-win32-x64.zip",
     "package-win32": "react-scripts build && electron-forge package --platform win32"
   },
   "eslintConfig": {
