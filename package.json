@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "0.22.0-beta.6",
+  "version": "0.22.1",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -74,7 +74,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start-tsc": "npx nodemon --trace-warnings",
-    "build": "cp -a node_modules/moorhen/public/* public/;cp -r node_modules/moorhen/moorhen.css ./src/ ;react-scripts build",
+    "build": "cp -a node_modules/moorhen/public/* public/; cp -r node_modules/moorhen/public/baby-gru/moorhen.css ./src/; react-scripts build",
     "build-cloud-dev": "webpack  --mode development --devtool inline-source-map",
     "build-cloud": "webpack --mode production",
     "test": "react-scripts test",
@@ -119,9 +119,9 @@
     "@electron-forge/maker-zip": "^6.0.5",
     "@emotion/react": "^11.14.0",
     "@mui/material": "^7.2.0",
-    "electron": "^36.6.0",
+    "electron": "^38.1.2",
     "electron-devtools-installer": "^3.2.0",
-    "moorhen": "^0.22.0-beta.6",
+    "moorhen": "^0.22.1",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
