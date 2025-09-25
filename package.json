@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "0.22.1",
+  "version": "0.22.3",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -121,7 +121,7 @@
     "@mui/material": "^7.2.0",
     "electron": "^38.1.2",
     "electron-devtools-installer": "^3.2.0",
-    "moorhen": "^0.22.1",
+    "moorhen": "^0.22.3",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
