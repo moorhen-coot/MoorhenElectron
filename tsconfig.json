@@ -1,29 +1,25 @@
 {
-    "compilerOptions": {
-        "allowJs": true,
-        "outDir": "tsDist",
-        "module": "es6",
-        "target": "es6",
-        "rootDir": "./",
-        "types": ["node", "./src/types"],
-        "lib": ["esnext", "es6", "dom", "dom.Iterable", "es2017"],
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "jsx": "react-jsx",
-        "sourceMap": true,
-        "moduleResolution": "node"
-      },
-      "include": [
-        "src/*",
-        "cloud/*"
-      ],
-      "exclude": [
-        "node_modules/*",
-        "tsDist/*",
-        "dist/*",
-        "nginx/*",
-        "test/*",
-        "src/__tests__/*",
-        "webpack.config.js"
-      ]
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["vite.config.ts"]
 }
