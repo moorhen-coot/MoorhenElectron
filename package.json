@@ -131,7 +131,7 @@
     "eslint": "^9.30.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "moorhen": "file:///Users/stuart/Moorhen-dev-test/baby-gru/dist/moorhen-1.0.0-alpha.0.tgz",
+    "moorhen": "1.0.0-alpha.1",
     "typescript": "^5.0.2",
     "vite": "^8.0.9",
     "vite-plugin-checker": "^0.10.3",
