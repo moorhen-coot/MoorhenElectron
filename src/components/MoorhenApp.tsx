@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { MoorhenProvider } from "moorhen";
-import { MoorhenContainer } from "moorhen";
+import { MoorhenProvider } from "moorhen/react-lib";
+import { MoorhenContainer } from "moorhen/react-lib";
 
 export const MoorhenExitMenu = (props: { exitCallback: () => void }) => {
     useEffect(() => {

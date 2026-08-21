@@ -1,6 +1,6 @@
 {
   "name": "moorhen-electron",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-beta.2",
   "private": true,
   "main": "public/electron.js",
   "homepage": "./",
@@ -67,10 +67,12 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.14.1",
+    "@reduxjs/toolkit": "^2.12.0",
     "busboy": "^1.6.0",
     "electron-is-dev": "^2.0.0",
     "electron-squirrel-startup": "^1.0.0",
     "express": "^4.18.2",
+    "react-redux": "^9.3.0",
     "react-router-dom": "^7.14.2"
   },
   "scripts": {
@@ -126,12 +128,12 @@
     "@vitejs/plugin-legacy": "^8.0.1",
     "@vitejs/plugin-react": "^5.0.3",
     "@vitejs/plugin-react-swc": "^4.1.0",
-    "electron": "^39.8.9",
+    "electron": "^43.4.1",
     "electron-devtools-installer": "^4.0.0",
     "eslint": "^9.30.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
-    "moorhen": "1.0.0-alpha.1",
+    "moorhen": "1.0.0-beta.2",
     "typescript": "^5.0.2",
     "vite": "^8.0.9",
     "vite-plugin-checker": "^0.10.3",
