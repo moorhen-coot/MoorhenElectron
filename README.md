@@ -14,7 +14,7 @@ an Electron App version of Moorhen.
 5.  Build the app  
   * `npm run make-mac-m1` to make an M1 macOS app and redistributable zip (tested on M1 Mac)
   * `npm run make-mac-intel` to make an Intel macOS app and redistributable zip (tested on M1 and Intel Macs)
-  * `npm run make-linux` to make an Linux macOS app and redistributable zip (tested on Linux)
+  * `npm run make-linux` to make an Linux app and redistributable zip (tested on Linux)
   * `npm run package-win32` to make a Windows app (tested on *Linux*)
 
 `make-win32` should also work, but is not recommended since it may be desirable to replace the minimal copy of the CCP4/refmac monomer library `public/baby-gru/monomers` with a complete copy. Under these circumstances `make-win32` hangs. One can always zip the result of `package-win32` by hand.
