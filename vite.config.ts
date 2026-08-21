@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react-swc'
 import legacy from '@vitejs/plugin-legacy'
 import crossOriginIsolation from 'vite-plugin-cross-origin-isolation'
 import wasm from "vite-plugin-wasm";
-import topLevelAwait from "vite-plugin-top-level-await";
 import checker from 'vite-plugin-checker';
 import { serverRoot } from './src/serverRoot';
 
@@ -14,7 +13,6 @@ export default defineConfig({
   plugins: [
       react(),
       wasm(),
-      topLevelAwait(),
       crossOriginIsolation(),
       checker({ typescript: {
           root: './',
