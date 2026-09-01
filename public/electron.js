@@ -52,10 +52,10 @@ function createWindow() {
               next();
           });
 
-          exp.use(express.static(path.join(__dirname,"..","build")));
+          exp.use(express.static(path.join(__dirname,"..","dist")));
       
           exp.get('/', (req, res) => {
-              res.send('Hello World! '+path.join(__dirname,"..","build"));
+              res.send('Hello World! '+path.join(__dirname,"..","dist"));
           });
       
           function serve(port) {
